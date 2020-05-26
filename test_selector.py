@@ -30,13 +30,13 @@ class TestSelector(tkinterTestCase.TkTestCase):
     def test_init_value_R(self):
         r_selector = calculator.Selector(self.root, "R")
         self.assertEqual(r_selector.status, "R")
+        r_selector.update()
+        r_selector.destroy()
 
     def test_click_change_status(self):
         rbtn_romano = self.s.children['rbtn_romano']
         self.assertEqual(self.s.status, "N")
-        self.assertEqual(self.s._Selector__value.get(), "N")
         rbtn_romano.invoke()
-        self.assertEqual(self.s._Selector__value.get(), "R")
         self.assertEqual(self.s.status, "R")
 
 

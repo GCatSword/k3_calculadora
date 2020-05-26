@@ -1,5 +1,5 @@
 import unittest
-from tkinter import *
+from tkinter import * 
 
 class TkTestCase(unittest.TestCase):
     @classmethod
